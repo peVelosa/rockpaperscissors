@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+  .default-margin{
+  @apply mt-4 mx-[2%] large-mobile:mx-auto;
+  }
+}
