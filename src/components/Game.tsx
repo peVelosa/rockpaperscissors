@@ -18,7 +18,7 @@ const Game = ({ setScore }: any) => {
   const playAgain = () => {
     setPlayer({ choose: '', img: '' })
     setHouse({ choose: '', img: '' })
-    setGameWinner()
+    setWinner('')
   }
 
   const pick = ({ choose, img }: any) => {
@@ -60,21 +60,28 @@ const Game = ({ setScore }: any) => {
 
   useEffect(() => {
     window.addEventListener('keydown', (e) => {
-      if (e.key == 'Enter' && document.getElementById('play-again')) return playAgain();
-      if (e.key == '1') return document.getElementById('paper')?.focus()
-      if (e.key == '2') return document.getElementById('scissors')?.focus()
-      if (e.key == '3') return document.getElementById('rock')?.focus()
-      if (e.key == '4') return document.getElementById('rules')?.focus()
+      switch (e.key) {
+        case ('Enter'):
+          if (document.body.contains(document.getElementById('play-again'))) {
+            playAgain();
+          }
+          return;
+        case ('1'):
+          return document.getElementById('paper')?.focus()
+        case ('2'):
+          return document.getElementById('scissors')?.focus()
+        case ('3'):
+          return document.getElementById('rock')?.focus()
+        case ('4'):
+          return document.getElementById('rules')?.focus()
+      }
     })
-    return () => window.removeEventListener('keydown', (e) => { })
+    return () => window.removeEventListener('keydown', () => { })
   }, [])
 
   useEffect(() => {
-  }, [house])
-
-  useEffect(() => {
     setGameWinner()
-    if (winner === "You win") return setScore((oldVal: number) => oldVal + 1)
+    if (winner === "You win") setScore((oldVal: number) => oldVal + 1)
   }, [house, winner])
 
   return (
