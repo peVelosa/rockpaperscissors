@@ -1,5 +1,31 @@
-# Rock, Paper, Scissors
+# Project Rock, Paper, Scissors (Lizard and Spock too)
 
-This app is a game challenged by [https://www.frontendmentor.io/](https://www.frontendmentor.io/)
+## Deploy
 
-Click here if you want to check my version of the game [https://pedr0velosa.github.io/rockpaperscissors/](https://pedr0velosa.github.io/rockpaperscissors/)
+https://pevelosa.github.io/rockpaperscissors/
+
+## Introduction
+
+This site is a single-player site that you can play rock, paper, scissors against cpu
+
+## Tecnologies
+
+Project is created with:
+
+- [Vite](https://vitejs.dev/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Tailwind](https://tailwindcss.com/)
+
+## Setup
+
+Verify your node version `node -v`
+
+```
+$ git clone https://github.com/peVelosa/to-do-app.git
+$ cd to-do-app
+$ npm install
+```
+
+Then run: `npm run dev`
+
+
