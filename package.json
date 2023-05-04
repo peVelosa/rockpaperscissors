@@ -1,12 +1,15 @@
 {
   "name": "rock-paper-scissors-master",
+  "homepage": "https://peVelosa.github.io/rockpaperscissors/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -19,6 +22,7 @@
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.0",
     "autoprefixer": "^10.4.8",
+    "gh-pages": "^5.0.0",
     "postcss": "^8.4.16",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.2.8",

@@ -14,6 +14,8 @@ const Rules = () => {
         align={"right-4 sm:top-10 bottom-8"}
         customClass={"w-full px-8 py-2 uppercase h-fit"}
         id="modal-button"
+        aria-label={`modal ${isOpen ? "is open" : "is closed"}`}
+        aria-modal={isOpen}
       >
         Rules
       </ButtonWrapper>

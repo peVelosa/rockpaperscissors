@@ -37,7 +37,7 @@ const ButtonGameWrapper = ({
 
   return (
     <button
-      className={`grid aspect-square w-24 place-content-center rounded-full border-[10px] sm:w-36 sm:border-[14px] ${
+      className={`grid aspect-square w-24 place-content-center rounded-full border-[10px] focus:outline focus:outline-[6px] focus:outline-fuchsia-500 sm:w-36 sm:border-[14px] ${
         !!payload ? "bg-white" : "bg-[#1f3756]"
       } p-4 ${align}`}
       onClick={() => playerPick(payload)}

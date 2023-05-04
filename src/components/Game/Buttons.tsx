@@ -1,6 +1,5 @@
 import ButtonGameWrapper from "./ButtonGameWrapper";
 import useGame from "src/utils/hooks/useGame";
-import { IReducerType } from "src/utils/reducerTypes";
 import { Scissors, Paper, Rock, Lizard, Spock } from "./icons/Icon";
 
 const Buttons = () => {
